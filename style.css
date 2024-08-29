@@ -26,8 +26,9 @@ nav {
     text-decoration: none;
 }
 
-h3:hover {
+.logo:hover {
     color: rgb(11, 180, 11);
+    transition: color 0.3s;
 }
 
 .links a {
@@ -56,12 +57,12 @@ h3:hover {
     align-items: center;
     justify-content: center;
     margin: 20px;
-    cursor: pointer;
+    /* cursor: pointer; */
     
-    & .btn{
+    & .btn {
         margin-bottom: 5px;
         text-decoration: none;
-        color: rgb(2, 45, 2);
+        color: black;
     }
     & img {
         width: 100%;
@@ -72,7 +73,7 @@ h3:hover {
         border-radius: 10px;
         margin-bottom: 5px;
     }
-    & .para{
+    & .para {
         padding: 0 5%;
     }
 }
@@ -83,7 +84,189 @@ h3:hover {
 
 .card .btn:hover{
         color: white;
+        cursor: pointer;
+}
+.btn:active {
+    transform: scale(0.9);
+    transition: transform 0.3s;
 }
 .card:hover {
     transform: scale(1.1);
+    transition: transform 0.3s;
+}
+.card img:hover{
+    cursor: pointer;
+}
+.box {
+    width: 100%;
+    padding: 3% 5%;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    /* align-items: center; */
+    color: white;
+    flex-wrap: wrap;
+    height: max-content;
+}
+.left, .right{
+    border: white solid 2px;
+
+    width: 40%;
+    /* min-height: fit-content; */
+    padding: 1%;
+    flex-wrap: wrap;
+    margin-right: 8px;
+    height: max(700px,max-content);
+}
+/* left */
+.left .title{
+    margin-bottom: 5px;
+}
+.left img{
+    width: 80%;
+    border-radius: 15px;
+    margin-bottom: 3px;
+    transition: opacity 0.5s;
+
+    /* aspect-ratio: 16/9; */
+}
+.left p {
+    margin-top: 10px;
+}
+button {
+    width: 100%;
+    border-radius: 7px;
+    font-size: 15px;
+    padding: 1%;
+    border: 1px solid;
+    margin-top: 35px;
+    transition:color 0.3s, background-color 0.3s, transform 0.3s;
+}
+button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s,background-color 0.3s, transform 0.3s;
+    transform: scale(0.95);
+}
+button:active {
+    transform: scale(0.9);
+    transition: transform 0.3s;
+}
+.left img:hover, .right img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}    
+/* right */
+.right .r1 img{
+    width: 35%;
+    border-radius: 15px;
+    transition: opacity 0.5s;
+}
+.right .r1 :not(.right .r1:last-child){
+    padding: 1%;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.r1 { 
+    display: flex;
+}
+.right button {
+    max-width: 100%;
+    margin-top: 30px;
+}
+.quick{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    & h3{
+        text-align: left;
+    }
+    
+}
+.quick .links{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.quick .links a {
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+    margin: 0;
+    text-align: center;
+    
+}
+.foot { 
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    height: max-content;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 1%;
+    flex-wrap: wrap;
+}
+/* .foot>*:not(:last-child) {
+    border-right: 3px solid ;
+    padding-right: 3%;
+} */
+.foot .lf {
+    size: 2px;
+    color: black;
+}
+.add {
+   align-items: center;
+}
+.addr>*{
+    list-style: none;
+    margin-top: 10px;
+    text-align: start;
+    /* margin-left: 20px; */
+    /* cursor: pointer; */
+}
+#street, #phone, #mail{
+    cursor: pointer;
+}
+#street::after{
+    content: " 📍";
+}
+#phone::after{
+    content: "  📞";
+}
+#mail::after{
+    content: "  📩";
+}    
+.mail button {
+    background-color: black;
+    border-radius: 10px;
+    margin-top: 12px;
+    color: white;
+}
+.mail button:hover {
+    background-color: white;
+    color: black;
+}
+.mail input {
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 2%;
+    background-color: black;
+    color: white;
+}
+.mail input::placeholder{
+    color: white;
+}
+footer {
+    background-color: black;
+    padding: 0.7%;
+    & h4{
+        color: white;
+        text-align: center;
+        font-size: small;
+    }
 }
